@@ -15,5 +15,5 @@ module.exports = function(grunt) {
       grunt.task.run('karma:unit');
     });
     
-    grunt.registerTask('travis',['karma:unit']);
+    grunt.registerTask('travis',['test:unit']);
 };

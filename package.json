@@ -3,9 +3,6 @@
   "version": "1.2.0",
   "description": "Authentication module for AngularJS",
   "main": "src/raaj-security-utils.js",
-  "scripts": {
-    "test": "grunt check"
-  },
   "author": "iORGA GROUP",
   "license": "LGPLv3",
   "devDependencies": {
