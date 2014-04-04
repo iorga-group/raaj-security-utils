@@ -6,6 +6,7 @@
   "author": "iORGA GROUP",
   "license": "LGPLv3",
   "scripts": {
+    "postinstall": "node node_modules/bower/bin/bower install",
     "test": "grunt travis --verbose"
   },
   "devDependencies": {

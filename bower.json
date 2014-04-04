@@ -14,8 +14,8 @@
     "cryptojslib": {
       "main": [
         "rollups/md5.js",
-  	"rollups/hmac-sha1.js",
-  	"components/enc-base64.js"
+        "rollups/hmac-sha1.js",
+        "components/enc-base64.js"
       ]
     }
   },
