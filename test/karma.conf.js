@@ -6,6 +6,10 @@ module.exports = function(config){
         // list of files / patterns to load in the browser
         files : [
           'node_modules/mocha/mocha.js',
+          'node_modules/should/should.js',
+          'bower_components/cryptojslib/rollups/md5.js',
+          'bower_components/cryptojslib/rollups/hmac-sha1.js',
+          'bower_components/cryptojslib/components/enc-base64.js',
           'src/raaj-security-utils.js',
           'test/unit/**/*.js'
         ],
@@ -13,6 +17,7 @@ module.exports = function(config){
         // list of files to exclude
         exclude : [],
 
+        frameworks: ['mocha'],
 
         // test results reporter to use
         // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'

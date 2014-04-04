@@ -31,7 +31,7 @@ describe('the securityUtils object', function() {
 			resource: '/'
 		};
 		securityUtils.addAuthorizationHeader('5YP9Z3DVCAHVDZPC0617VT91D', 'iLKJ8zhzU/5eEZFKeQ5bP+piXQ/JQr4+QKbORZP0', request);
-		expect(request.headers['Authorization']).toBe('IWS 5YP9Z3DVCAHVDZPC0617VT91D:fWUiX2xF1+oSDIv7m+3cbo8Ve88=');
+		request.headers['Authorization'].should.equal('IWS 5YP9Z3DVCAHVDZPC0617VT91D:fWUiX2xF1+oSDIv7m+3cbo8Ve88=');
 	});
 	it('must add a date field if not exists', function() {
 		var request = {
@@ -43,7 +43,7 @@ describe('the securityUtils object', function() {
 			resource: '/'
 		};
 		securityUtils.addAuthorizationHeader('5YP9Z3DVCAHVDZPC0617VT91D', 'iLKJ8zhzU/5eEZFKeQ5bP+piXQ/JQr4+QKbORZP0', request);
-		expect(request.headers['X-IRAJ-Date']).toBeDefined();
+		(request.headers['X-IRAJ-Date']).should.be.ok;
 	});
 	it('must not take care of the Content-Type case', function() {
 		var date = new Date().toUTCString();
@@ -67,6 +67,6 @@ describe('the securityUtils object', function() {
 			resource: '/'
 		};
 		securityUtils.addAuthorizationHeader('5YP9Z3DVCAHVDZPC0617VT91D', 'iLKJ8zhzU/5eEZFKeQ5bP+piXQ/JQr4+QKbORZP0', request2);
-		expect(request1.headers['Authorization']).toEqual(request2.headers['Authorization']);
-	})
+		(request1.headers['Authorization']).should.equal(request2.headers['Authorization']);
+	});
 });
