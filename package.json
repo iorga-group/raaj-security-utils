@@ -5,6 +5,9 @@
   "main": "src/raaj-security-utils.js",
   "author": "iORGA GROUP",
   "license": "LGPLv3",
+  "scripts": {
+    "test": "grunt travis --verbose"
+  },
   "devDependencies": {
     "grunt": "~0.4.4",
     "bower": "~1.3.1",
