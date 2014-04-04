@@ -1,0 +1,31 @@
+{
+  "name": "raaj-security-utils",
+  "version": "1.2.0",
+  "homepage": "https://github.com/iorga-group/raaj-security-utils",
+  "authors": [
+    "iORGA GROUP"
+  ],
+  "description": "Restless Architecture for AngularJS - Security Utils",
+  "main": "./src/raaj-security-utils.js",
+  "dependencies": {
+    "cryptojslib": "~3.1.2"
+  },
+  "overrides": {
+    "cryptojslib": {
+      "main": [
+        "rollups/md5.js",
+  		"rollups/hmac-sha1.js",
+  		"components/enc-base64-min.js"
+      ]
+    }
+  },
+  "keywords": [
+    "raaj",
+    "security-utils",
+    "restless"
+  ],
+  "license": "LGPLv3",
+  "ignore": [
+    "test"
+  ]
+}
