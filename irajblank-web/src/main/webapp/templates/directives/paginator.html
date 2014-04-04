@@ -1,8 +1,0 @@
-<ul class="pagination pagination-centered">
-   	<li ng-show="showNextButtons()" ng-click="goToFirstPage()"><a href="">&laquo;</a></li>
-   	<li ng-show="showNextButtons()" ng-click="goToPreviousPage()"><a href="">&lt;</a></li>
-	<li ng-class="{disabled:paginator.currentPage == num}" ng-repeat="num in numerosPage" ng-click="goToPage(num)"><a href="">{{num}}</a></li>
-   	<li ng-show="showPreviousButtons()" ng-click="goToNextPage()"><a href="">&gt;</a></li>
-   	<li ng-show="showPreviousButtons()" ng-click="goToLastPage()"><a href="">&raquo;</a></li>
-   	<select class="form-control input-sm" ng-model="paginator.pageSize" ng-options="size for size in pageSizeList"></select>
-</ul>
