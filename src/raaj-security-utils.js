@@ -25,7 +25,7 @@
 		 *   headers: // {
 		 *   	'Content-Type': // string for the contentType,
 		 *   	'Date': // date,
-		 *   	'X-IRAJ-Date': // forged date} ...
+		 *   	'X-RAAJ-Date': // forged date} ...
 		 *   resource: // PATH-INFO + QUERY-STRING
 		 * }
 		 */
@@ -45,16 +45,16 @@
 			}
 			data += '\n';
 			/// Date
-			var date = httpRequestToSign.headers['Date'], xirajdate;
-			if (httpRequestToSign.headers['X-IRAJ-Date'] && httpRequestToSign.headers['X-IRAJ-Date'].length > 0) {
-				xirajdate = httpRequestToSign.headers['X-IRAJ-Date'];
-				date = xirajdate;
+			var date = httpRequestToSign.headers['Date'], xraajdate;
+			if (httpRequestToSign.headers['X-RAAJ-Date'] && httpRequestToSign.headers['X-RAAJ-Date'].length > 0) {
+				xraajdate = httpRequestToSign.headers['X-RAAJ-Date'];
+				date = xraajdate;
 			}
 			data += date + '\n';
 			// Handling security additional headers
-			//TODO handle this generically, see com.iorga.iraj.security.SecurityUtils.computeData(HttpRequestToSign)
-			if (xirajdate) {
-				data += 'x-iraj-date:' + xirajdate + '\n';
+			//TODO handle this generically, see com.iorga.raaj.security.SecurityUtils.computeData(HttpRequestToSign)
+			if (xraajdate) {
+				data += 'x-raaj-date:' + xraajdate + '\n';
 			}
 			data += httpRequestToSign.resource + '\n';
 			return data;
@@ -67,8 +67,8 @@
 			return 'IWS ' + accessKeyId + ':' + securityUtils.computeDataSignature(secretAccessKey, securityUtils.computeData(httpRequestToSign));
 		},
 		addAuthorizationHeader: function(accessKeyId, secretAccessKey, httpRequestToSign) {
-			if (!httpRequestToSign.headers['X-IRAJ-Date'] && !httpRequestToSign.headers['Date']) {
-				httpRequestToSign.headers['X-IRAJ-Date'] = new Date().toUTCString();
+			if (!httpRequestToSign.headers['X-RAAJ-Date'] && !httpRequestToSign.headers['Date']) {
+				httpRequestToSign.headers['X-RAAJ-Date'] = new Date().toUTCString();
 			}
 			httpRequestToSign.headers['Authorization'] = securityUtils.computeAuthorizationHeaderValue(accessKeyId, secretAccessKey, httpRequestToSign);
 		}

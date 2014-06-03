@@ -1,6 +1,6 @@
 {
   "name": "raaj-security-utils",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Authentication module for AngularJS",
   "main": "src/raaj-security-utils.js",
   "author": "iORGA GROUP",

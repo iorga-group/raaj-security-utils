@@ -26,7 +26,7 @@ describe('the securityUtils object', function() {
 			headers: {
 				'Content-Type': 'text/plain',
 				'Date': 'Mon, 22 Apr 2013 00:00:00 GMT',
-				'X-IRAJ-Date': 'Thu, 01 Jan 1970 00:00:00 GMT'
+				'X-RAAJ-Date': 'Thu, 01 Jan 1970 00:00:00 GMT'
 			},
 			resource: '/'
 		};
@@ -43,7 +43,7 @@ describe('the securityUtils object', function() {
 			resource: '/'
 		};
 		securityUtils.addAuthorizationHeader('5YP9Z3DVCAHVDZPC0617VT91D', 'iLKJ8zhzU/5eEZFKeQ5bP+piXQ/JQr4+QKbORZP0', request);
-		(request.headers['X-IRAJ-Date']).should.be.ok;
+		(request.headers['X-RAAJ-Date']).should.be.ok;
 	});
 	it('must not take care of the Content-Type case', function() {
 		var date = new Date().toUTCString();
@@ -52,7 +52,7 @@ describe('the securityUtils object', function() {
 			body: 'Body Test',
 			headers: {
 				'Content-Type': 'text/plain;charset=utf-8',
-				'X-IRAJ-Date': date
+				'X-RAAJ-Date': date
 			},
 			resource: '/'
 		};
@@ -62,7 +62,7 @@ describe('the securityUtils object', function() {
 			body: 'Body Test',
 			headers: {
 				'Content-Type': 'text/plain;charset=UTF-8',
-				'X-IRAJ-Date': date
+				'X-RAAJ-Date': date
 			},
 			resource: '/'
 		};
