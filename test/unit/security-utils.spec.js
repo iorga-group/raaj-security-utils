@@ -31,7 +31,7 @@ describe('the securityUtils object', function() {
 			resource: '/'
 		};
 		securityUtils.addAuthorizationHeader('5YP9Z3DVCAHVDZPC0617VT91D', 'iLKJ8zhzU/5eEZFKeQ5bP+piXQ/JQr4+QKbORZP0', request);
-		request.headers['Authorization'].should.equal('IWS 5YP9Z3DVCAHVDZPC0617VT91D:fWUiX2xF1+oSDIv7m+3cbo8Ve88=');
+		request.headers['Authorization'].should.equal('IWS 5YP9Z3DVCAHVDZPC0617VT91D:SZyQh6nfvSiML9JUwgxFaRtglYA=');
 	});
 	it('must add a date field if not exists', function() {
 		var request = {
