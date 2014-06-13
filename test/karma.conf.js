@@ -1,17 +1,27 @@
 module.exports = function(config){
     config.set({
         // base path, that will be used to resolve files and exclude
-        basePath : '../',
+       // basePath : '../',
 
         // list of files / patterns to load in the browser
         files : [
-          'node_modules/mocha/mocha.js',
-          'node_modules/should/should.js',
-          'bower_components/cryptojslib/rollups/md5.js',
-          'bower_components/cryptojslib/rollups/hmac-sha1.js',
-          'bower_components/cryptojslib/components/enc-base64.js',
-          'src/raaj-security-utils.js',
-          'test/unit/**/*.js'
+          // bower:js
+          "../bower_components/angular/angular.js",
+          "../bower_components/cryptojslib/components/core.js",
+          "../bower_components/cryptojslib/components/md5.js",
+          "../bower_components/cryptojslib/components/sha1.js",
+          "../bower_components/cryptojslib/components/hmac.js",
+          "../bower_components/cryptojslib/components/enc-base64.js",
+          "../bower_components/cryptojslib/components/evpkdf.js",
+          "../bower_components/cryptojslib/components/cipher-core.js",
+          "../bower_components/cryptojslib/components/aes.js",
+          "../bower_components/cryptojslib/components/pbkdf2.js",
+          // endbower
+          '../node_modules/mocha/mocha.js',
+          '../node_modules/should/should.js',
+          '../bower_components/angular-mocks/angular-mocks.js',
+          '../src/raaj-security-utils.js',
+          'unit/**/*.js'
         ],
 
         // list of files to exclude

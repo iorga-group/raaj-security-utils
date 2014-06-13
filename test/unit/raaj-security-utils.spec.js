@@ -15,8 +15,15 @@
  * along with this program.  If not, see [http://www.gnu.org/licenses/].
  */
 describe('the securityUtils object', function() {
-	// beforeEach(function () {});
-	// afterEach(function () {});
+	var securityUtils;
+	
+	beforeEach(function() {
+		// inspired by http://www.benlesh.com/2013/06/angular-js-unit-testing-services.html
+		module('raajSecurityUtils');
+		inject(function(raajSecurityUtils) {
+			securityUtils = raajSecurityUtils;
+		});
+	});
 	
 	// Specs
 	it('must add the authentication header to a simple request', function() {
